@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="126.42281mm"
+   height="50.710941mm"
+   viewBox="0 0 126.42281 50.710941"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870, 2021-01-15)"
+   sodipodi:docname="logo6.svg">
+  <title
+     id="title1169">Murali Narayanan</title>
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect1166"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m 145.17741,-7.7599209 c 0,-2.7600001 -2.24,-5.0000001 -5,-5.0000001 -2.76,0 -5,2.24 -5,5.0000001 0,2.759999 2.24,4.999999 5,4.999999 2.76,0 5,-2.24 5,-4.999999 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect1143"
+       is_visible="true"
+       lpeversion="1"
+       pattern="m -18.994067,-7.3060153 c 0,-2.7599997 2.24,-4.9999997 5,-4.9999997 2.76,0 5,2.24 5,4.9999997 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#cc3333;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path862" />
+    </marker>
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect849"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="2,0.1322915"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect845"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="2,0.1322915"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.60647144"
+     inkscape:cx="394.42039"
+     inkscape:cy="56.700201"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1536"
+     inkscape:window-height="801"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Murali Narayanan</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0.11972761,-0.28607981)">
+    <path
+       style="fill:#cc3333;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M -1.4445993e-7,50.829193 C -1.8592193,48.789364 18.155583,28.989784 44.675897,6.6337027 c 2.384871,-2.010397 4.742081,-3.9849099 7.029668,-5.89371719 10e-7,1.33e-6 2e-6,2.66e-6 3e-6,3.99e-6 C 70.85242,24.941286 83.632548,44.546735 81.594237,46.0138 79.555927,47.480864 66.064104,30.584581 51.022909,7.2856797 c -10e-7,-1.2e-6 -10e-7,-2.5e-6 -2e-6,-3.8e-6 C 49.036885,9.2720224 46.996746,11.305635 44.934222,13.348791 21.989751,36.077802 1.8592192,52.869022 -1.4445993e-7,50.829193 Z"
+       id="path1141"
+       inkscape:path-effect="#path-effect1143"
+       inkscape:original-d="M -4.3415394e-8,50.829193 51.364236,4.0128307 81.594233,46.013794" />
+    <path
+       style="mix-blend-mode:color-dodge;fill:#22b14c;fill-opacity:1;stroke:none;stroke-width:0.254;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 44.589113,45.559895 c 2.038311,1.467064 15.530132,-15.429219 30.571323,-38.7281216 10e-7,-1.2e-6 2e-6,-2.5e-6 3e-6,-3.8e-6 1.986021,1.9863467 4.026162,4.0199594 6.088686,6.0631164 C 104.1936,35.623895 124.32413,52.415113 126.18335,50.375284 128.04257,48.335455 108.02777,28.535877 81.507449,6.1797976 79.122578,4.1694003 76.765367,2.1948873 74.477779,0.28607981 c 0,0 -3e-6,3.99e-6 -3e-6,3.99e-6 C 55.330928,24.487382 42.550803,44.092832 44.589113,45.559895 Z"
+       id="path1141-2"
+       inkscape:path-effect="#path-effect1166"
+       inkscape:original-d="M 126.18335,50.375284 74.819109,3.5589247 44.589119,45.559888" />
+  </g>
+</svg>
