@@ -14,12 +14,12 @@ h2 {
 	border: 2px solid green;
         color: black;
 	font-family: 'B612', sans-serif;
-        padding: 20px 34px;
+        padding: 5px 5px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 20px;
-	width:500px;
+	#width:500px;
         margin: 4px 2px;
         cursor: pointer;
       }
