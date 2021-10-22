@@ -49,3 +49,11 @@ a:hover, a:active {
 img {
 	text-align: "left";
 }
+.pagenum { /* uncomment the next line for invisible page numbers */
+    visibility: hidden;  
+    position: absolute;
+    left: 92%;
+    font-size: smaller;
+    text-align: right;
+} /* page numbers */
+
