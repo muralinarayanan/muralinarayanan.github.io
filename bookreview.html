@@ -3,7 +3,7 @@ layout: default
 title: Book Review
 ---
 <table>
-  {% for row in site.books %}
+  {% for row in site.data.books %}
     {% if forloop.first %}
     <tr>
       {% for pair in row %}
