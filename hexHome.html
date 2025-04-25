@@ -1,0 +1,235 @@
+<html>
+  <head>
+    <title>The Great Button Site</title>
+    <style>
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Merriweather, Georgia, serif;
+  font-size: 62.5%;
+}
+body {
+  color: hsl(0, 0%, 10%);
+  background-color: hsl(0, 0%, 95%);
+  border-top: 5px solid hsl(220, 50%, 75%);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 30px;
+  bottom: 0;
+  top: 0;
+}
+.hexagon {
+  position: relative;
+  display: inline-block;
+  /* left/right margin approx. 25% of .hexagon width + spacing */
+  margin: 1px 18px;
+  background-color: hsl(220, 75%, 75%);
+  text-align: center;
+}
+.hexagon, .hexagon::before, .hexagon::after {
+  /* easy way: height is width * 1.732
+  actual formula is 2*(width/(2*Math.tan(Math.PI/6)))
+  remove border-radius for sharp corners on hexagons */
+  width: 67px;
+  height: 116px;
+  border-radius: 20%/5%;
+}
+.hexagon::before {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(-60deg);
+}
+.hexagon::after {
+  background-color: inherit;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(60deg);
+}
+.hexagon:nth-child(even) {
+  /* top approx. 50% of .hexagon height + spacing */
+  top: 59px;
+}
+.hexagon:hover {
+  background-color: hsla(60, 75%, 75%, 1.0);
+  cursor: pointer;
+  z-index: 105;
+}
+.hexagon:active {
+  background-color: hsla(60, 75%, 50%, 1.0);
+  z-index: 110;
+}
+.hexanone {
+  position: relative;
+  display: inline-block;
+  width: 67px;
+  height: 116px;
+  margin: 1px 18px;
+}
+.hexanone:nth-child(even) {
+  top: 59px;
+}
+.hexagontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  z-index: 100;
+}
+.ibws-fix {
+  /* inline-block whitespace fix */
+  font-size: 0;
+}
+.honeycomb {
+  margin: 0 auto;
+  text-align: center;
+}
+    </style>
+  </head>
+  <body>
+<div class="honeycomb">
+  <div class="ibws-fix">
+    <div class="hexagon">
+      <div class="hexagontent"> <a href="http://www.google.com"> Google </a> </div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">Are losing theirs and blaming it on you,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If you can trust yourself when all men doubt you,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">But make allowance for their doubting too;</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If you can wait and not be tired by waiting,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">Or being lied about, don't deal in lies,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">Or being hated, don't give way to hating,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And yet don't look too good, nor talk too wise:</div>
+    </div>
+  </div>
+  <div class="ibws-fix">
+    <div class="hexagon">
+      <div class="hexagontent">If you can dream - and not make dreams your master;</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If you can think - and not make thoughts your aim;</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If you can meet with Triumph and Disaster</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And treat those two impostors just the same;</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If you can bear to hear the truth you've spoken</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">Twisted by knaves to make a trap for fools,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">Or watch the things you gave your life to, broken,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And stoop and build 'em up with worn-out tools:</div>
+    </div>
+  </div>
+  <div class="ibws-fix">
+    <div class="hexagon">
+      <div class="hexagontent">If you can make one heap of all your winnings</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And risk it on one turn of pitch-and-toss,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And lose, and start again at your beginnings</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And never breathe a word about your loss;</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If you can force your heart and nerve and sinew</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">To serve your turn long after they are gone,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And so hold on when there is nothing in you</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">Except the Will which says to them: 'Hold on!'</div>
+    </div>
+  </div>
+  <div class="ibws-fix">
+    <div class="hexagon">
+      <div class="hexagontent">If you can talk with crowds and keep your virtue,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">' Or walk with Kings - nor lose the common touch,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If neither foes nor loving friends can hurt you,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If all men count with you, but none too much;</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">If you can fill the unforgiving minute</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">With sixty seconds' worth of distance run,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">Yours is the Earth and everything that's in it,</div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">And - which is more - you'll be a Man, my son!</div>
+    </div>
+  </div>
+  <div class="ibws-fix">
+    <div class="hexagon">
+      <div class="hexagontent">
+        <h1>IF</h1>
+      </div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent">&mdash; Rudyard Kipling</div>
+    </div>
+    <div class="hexanone">
+      <div class="hexagontent"></div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent"></div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent"></div>
+    </div>
+    <div class="hexanone">
+      <div class="hexagontent"></div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent"></div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagontent"></div>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
