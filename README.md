@@ -1,2 +1,2 @@
 # muralinan.github.io
-This is the personal website for user muralinan
+This is the personal website of muralinarayanan

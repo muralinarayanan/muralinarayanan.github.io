@@ -1,189 +1,365 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
-  "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Murali Narayanan</title>
-<!-- html -->
-<base target="_blank">
 <meta charset="UTF-8">
-
-<link rel="shortcut icon" href="/assets/logo6.ico">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=B612" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<!--style="background-color:black; color:white;" -->
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_blank">
+<title>Murali Narayanan | Home</title>
+<link rel="shortcut icon" href="/assets/logo6.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  :root {
+    --primary: #1a3c5e;
+    --accent: #2e7d32;
+    --accent-lt: #e8f5e9;
+    --bg: #f0f2f5;
+    --surface: #ffffff;
+    --border: #d0d7de;
+    --text: #1c2128;
+    --text-muted: #57606a;
+    --radius: 8px;
+    --shadow: 0 1px 4px rgba(0,0,0,.1);
+    --nav-h: 56px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg); color: var(--text); font-size: 14px;
+    padding-top: calc(var(--nav-h) + 34px);
+  }
+  a { color: inherit; }
+  #topbar {
+    position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h);
+    background: var(--primary); display: flex; align-items: center;
+    padding: 0 20px; gap: 16px; z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  }
+  #topbar h1 { color: #fff; font-size: 18px; font-weight: 700; white-space: nowrap; }
+  #topbar nav { display: flex; flex-wrap: wrap; gap: 4px; flex: 1; justify-content: flex-end; }
+  #topbar nav a { color: rgba(255,255,255,.85); text-decoration: none; font-size: 12px; padding: 4px 8px; border-radius: 4px; transition: background .15s; white-space: nowrap; }
+  #topbar nav a:hover { background: rgba(255,255,255,.15); color: #fff; }
+  #time-row {
+    display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+    padding: 8px 20px; background: #142f4a;
+    border-top: 1px solid rgba(255,255,255,.1);
+    position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 999;
+  }
+  #time-row > div { font-size: 12px; font-weight: 600; color: rgba(255,255,255,.8); font-variant-numeric: tabular-nums; letter-spacing: .3px; }
+  #main { max-width: 1400px; margin: 0 auto; padding: 16px 20px 40px; }
+  .search-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .search-row form { display: flex; gap: 6px; flex: 1; min-width: 200px; align-items: center; }
+  .search-row input[type="text"] { flex: 1; padding: 9px 14px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; background: var(--surface); outline: none; transition: border-color .15s; }
+  .search-row input[type="text"]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(46,125,50,.15); }
+  .search-row input[type="submit"] { padding: 8px 16px; background: var(--accent); color: #fff; border: none; border-radius: var(--radius); cursor: pointer; font-size: 13px; font-weight: 600; }
+  .search-row input[type="submit"]:hover { background: #1b5e20; }
+  #filter-wrap { margin-bottom: 16px; position: relative; }
+  #filter-wrap::before { content: "🔗"; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #888; pointer-events: none; }
+  #myInput { width: 100%; padding: 9px 14px 9px 36px; border: 1px solid var(--border); border-radius: var(--radius); font-size: 14px; background: var(--surface); outline: none; transition: border-color .15s; }
+  #myInput:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(46,125,50,.15); }
+  #calendar-section { margin-bottom: 20px; }
+  #monthly-calendar .cal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 320px)); gap: 12px; }
+  #monthly-calendar .cal-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow); max-width: 340px; }
+  #monthly-calendar .cal-title { font-weight: 700; text-align: center; margin-bottom: 8px; color: var(--primary); font-size: 14px; }
+  #monthly-calendar table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  #monthly-calendar th, #monthly-calendar td { text-align: center; padding: 5px 0; border: 1px solid #eee; font-size: 13px; }
+  #monthly-calendar th { background: var(--primary); color: #fff; font-weight: 600; font-size: 11px; text-transform: uppercase; border-color: var(--primary); }
+  #monthly-calendar td.today { background: var(--accent); color: #fff; font-weight: 700; border-radius: 4px; border-color: var(--accent); }
+  #monthly-calendar td.empty { background: #fafafa; color: #ccc; }
+  #sections-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+  .section-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .section-card details { height: 100%; }
+  .section-card summary { list-style: none; cursor: pointer; padding: 12px 16px; background: var(--primary); color: #fff; font-weight: 700; font-size: 13px; user-select: none; display: flex; align-items: center; gap: 8px; }
+  .section-card summary::-webkit-details-marker { display: none; }
+  .section-card summary::before { content: "▶"; font-size: 9px; transition: transform .2s; }
+  .section-card details[open] summary::before { transform: rotate(90deg); }
+  .section-card summary:hover { background: #1e4976; }
+  .card-body { padding: 12px 14px; display: flex; flex-wrap: wrap; gap: 6px; align-content: flex-start; }
+  .card-body a { display: inline-block; padding: 5px 12px; border: 1px solid var(--accent); border-radius: 20px; color: var(--accent); text-decoration: none; font-size: 12px; font-weight: 500; background: #fff; transition: background .15s, color .15s, box-shadow .15s; white-space: nowrap; line-height: 1.4; }
+  .card-body a:hover { background: var(--accent); color: #fff; box-shadow: 0 2px 6px rgba(46,125,50,.3); }
+  .sub-label { width: 100%; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: .5px; margin-top: 6px; margin-bottom: 2px; padding-bottom: 4px; border-bottom: 1px solid var(--border); }
+  .full-width { grid-column: 1 / -1; }
+  @media (max-width: 600px) { #topbar nav { display: none; } #sections-grid { grid-template-columns: 1fr; } }
+</style>
 </head>
-<body> 
-<header> 
-<img src="assets/logo6.svg" width="150" alt="logo" style="float:left">
-<h1>Main Page </h1>
+<body>
 
-<hr>
-</header>
+<div id="topbar">
+  <h1>Murali Narayanan</h1>
+  <nav>
+    <a href="#biz">Biz</a>
+    <a href="#latex">LaTeX</a>
+    <a href="#devotional">Devotional</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#photography">Photography</a>
+    <a href="#science">Science</a>
+    <a href="#local">Local</a>
+    <a href="#shopping">Shopping</a>
+  </nav>
+</div>
 
-<main>
-<details>
-<summary> Biz </summary>
-<a class="button" href="https://hbswk.hbs.edu/">Harvard Business School Working Knowledge</a>
-</details>
+<div id="time-row">
+  <div id="gmt-time"></div>
+  <div id="local-time"></div>
+  <div id="ist-time"></div>
+</div>
 
-<details>
-<summary> Latex </summary>
-	<a class="button" href="https://www.latex-project.org/">LaTeX Project</a> project started to develop the next version of the LaTex typesetting system.  
-Enhance your knowledge with <a class="button" href="https://www.latextemplates.com">Latex Templates</a> and
-	<a class="button" href="https://latexdraw.com/">Latex Draw</a>.
-	<a class="button" href="https://www.overleaf.com">Overleaf</a> is also a great place to look at various templates.
-	<a class="button" href="https://ctan.math.illinois.edu/info/impatient/book.pdf">The TeX Book</a>
-	<a class="button" href="https://www.ctan.org/tex-archive/systems/knuth/dist/tex/">The Tex Book Source</a>
-	<a class="button" href="https://mirrors.rit.edu/CTAN/info/texbytopic/TeXbyTopic.pdf">Tex by Topic</a>
-	<a class="button" href="https://www.dickimaw-books.com/latexresources.html">Dickimaw Books</a>
-	<a class="button" href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">Latex Symbols</a>
-	<a class="button" href="https://www.giss.nasa.gov/tools/latex/ltx-2.html">NASA Guide</a>
-	<a class="button" href="https://ras.papercept.net/conferences/support/tex.php">IEEE Robotics</a>
-	<a class="button" href="https://tex.stackexchange.com/questions/230526/list-of-books-written-in-latex-with-the-source-available"> Books in LaTeX</a>
+<div id="main">
+  <div class="search-row">
+    <form method="GET" action="https://www.google.com">
+      <input type="text" name="q" placeholder="Search Google…">
+      <input type="submit" value="Google Search">
+    </form>
+  </div>
 
-</details>
-	<br>
-	<details> <summary><i class="fas fa-om"></i> </summary>
-		<a class="button" href="Devotional.html">Devotional Page </a>
-	<p >
-		<a class="button" href="http://dvaita.org">Dvaita </a>
-		<a class="button" href="https://madhwafestivals.wordpress.com/">Madhwa blog</a>
-		<a class="button" href="https://sites.google.com/site/aktbfkollam/">MADHWA SAMAJAM KOLLAM</a>
-		<a class="button" href="https://anandsp1.wordpress.com">AnandSp1</a>
-		<a class="button" href="http://vyasamadhwa.org/">Sri Vyaasa Madhwa Samshodhana Pratishtaana</a>
-		<a class="button" href="http://meerasubbarao.wordpress.com/">Meera Subbarao</a>
-                <a class="button" href="http://www.vyasamadhwa.org/upanyasa/"> Sri Vyaasa Madhwa Upanyasa </a>
-		<a class="button" href="http://gururaghavendra1.org/cal.pdf">Sri Guru Raghavendra English Calendar </a>
-                <a class="button" href="http://madhwapracharavedike.weebly.com/sandhya-vandanam--deva-pooja-paddati.html"> Deva Pooja</a>
-		<a class="button" href="http://mypanchang.com/">My Panchang</a>
-		<a class="button" href="https://www.prapatti.com/"> Prapatti </a>
-		<a class="button" href="https://www.esamskriti.com/ebook.aspx"> eSamskriti </a>
-		<a class="button" href="http://www.acharya.org"> Acharya - Srivaishnava Sampradayam </a>
-<br>
-<h2>  <i class="fas fa-gopuram"></i>Temples</h2>
-		<a class="button" href="http://svtemple.org/"> SV Temple, Pitt </a>
-		<a class="button" href="http://ssvt.org">SSVT MD</a>
-		<a class="button" href="http://www.haritemple.org">HARI </a>
-		<a class="button" href="http://hindutemplede.org/">Delaware Temple </a>
-		<a class="button" href="http://www.sbat.org/">Sri Bhaktha Anjaneya Temple </a>
-		<a class="button" href="https://venkateswaratemple.org/">Sri Venkateswara Temple, Bridgewater Anjaneya Temple </a>
+  <div id="filter-wrap">
+    <input type="text" id="myInput" onkeyup="filterLinks()" placeholder="Filter all links…">
+  </div>
 
-<br>
-<h2>  <i class="fas fa-book"></i>Books</h2>
-   <a class="button" href="SathyanaraynaPujaProcedure.pdf">Sri Sathyanarayana Puja</a>
-   <a class="button" href="media/DevaPooja.pdf">Deva Puja Scanned</a>
-   <a class="button" href="media/GokulashtamiPooja.pdf">Gokulashtami Pooja</a>
-   <a class="button" href="media/RaghavendraStoraMala.pdf">Raghavendra Stotra Mala</a>
-   <a class="button" href="media/RigVedaSandhyavanthanam.pdf">Rig Veda Sandhyavanthanam</a>
-   <a class="button" href="media/VaralaksmiPooja.pdf">Varalakshmi Puja</a>
-	</details>
+  <div id="calendar-section"><section id="monthly-calendar"></section></div>
 
-	<br>
-	<details> <summary><i class="fas fa-pepper-hot"></i>  </summary>
-	<p>
-		<a class="button" href="http://maneadige.blogspot.com/">Maneadige</a>
-		<a class="button" href="http://www.vegrecipesofindia.com/">Veg recipies of India</a>
-		<a class="button" href="https://www.shelikesfood.com">SheLikesFood</a>
-		<a class="button" href="http://www.upala.net">Upala.net </a>
-		<a class="button" href="https://www.thekitchn.com/25-vegetarian-dinners-to-make-in-your-cast-iron-skillet-236383">Kitchn Cast Iron </a>
-		<a class="button" href="https://www.vegetariantimes.com">Vegetarian Times </a>
-		<a class="button" href="https://naturallyella.com">Naturally Ella</a>
-		<a class="button" href="https://herbivoracious.com">Herbivoracious </a>
-		<a class="button" href="http://www.mydomaine.com/cast-iron-skillet-recipes">MyDomaine</a>
-		<a class="button" href="https://www.nutrition-and-you.com">Nutrition and You</a>
-		<a class="button" href="https://sadhanakitchen.blogspot.com/">Sadhana Kitchen</a>
-		<a class="button" href="https://hebbarskitchen.com">Hebbar Kitchen</a>
-		<a class="button" href="https://www.youtube.com/channel/UCPPIsrNlEkaFQBk-4uNkOaw">Hebbar Kitchen Youtube</a>
-		<a class="button" href="https://www.happycow.net">Happy Cow</a>
+  <div id="sections-grid">
 
-	</details>
+    <div class="section-card" id="biz">
+      <details open><summary>Biz</summary>
+        <div class="card-body">
+          <a href="https://hbswk.hbs.edu/">Harvard Business School Working Knowledge</a>
+        </div>
+      </details>
+    </div>
 
-	<br>
-	<details> <summary> <i class="fas fa-camera"></i> </summary> 
-<a class="button" href="http://digital-photography-school.com/">DPS</a> <a
-		class="button" href="http://petapixel.com">Peta</a> <a class="button" href="http://www.diyphotography.net/">DIY</a> <a class="button" href="http://slrcoaching.com/">SLR
-		Coarching </a> <a class="button" href="http://www.cambridgeincolour.com">Cambridge</a> <a class="button" href="http://www.lightstalking.com">LightStalking</a> <a
-		class="button" href="http://yourshot.nationalgeographic.com">YourShot</a> <a class="button" href="https://photographylife.com">PhotographyLife</a> <a
-		class="button" href="https://www.capturelandscapes.com">Capture Landscapes</a> <a class="button" href="https://wspc.photoclubservices.com">WestShoreClub</a> <a
-		class="button" href="http://www.skyandtelescope.com">Sky and Telescope</a> <a class="button" href="http://www.dpreview.com">DP review</a> <a
-		class="button" href="http://shutterbug.com" class="url">http://shutterbug.com</a>
-	<p>
-		<a class="button" href="http://amateurphotographer.co.uk" class="url">http://amateurphotographer.co.uk</a>
-		<a class="button" href="http://photographytalk.com" class="url">http://photographytalk.com</a>
-		<a class="button" href="http://fstoppers.com" class="url">http://fstoppers.com</a>
-		/
-	<p>
-		<a class="button" href="http://thephoblographer.com" class="url">http://thephoblographer.com</a>
-		<a class="button" href="http://iso1200.com" class="url">http://iso1200.com</a>
-		<a class="button" href="http://lomography.com" class="url">http://lomography.com</a>
-		<a class="button" href="https://www.picturecorrect.com" class="url">https://www.picturecorrect.com</a>
-		<a class="button" href="https://www.digitalphotomentor.com" class="url">https://www.digitalphotomentor.com</a>
-	</details>
-	
-<!-- Science -->
-<br>	
-<details> 
-<summary><i class="fas fa-microscope"></i>  </summary> 
-	<a class="button" href="http://www.plos.org" class="url">http://www.plos.org</a> 
-	<a class="button" href="http://www.pnas.org" class="url">http://www.pnas.org</a> 
-<a class="button" href="https://www.sapiens.org" class="url">https://www.sapiens.org</a>
-	<a class="button" href="http://plus.maths.org" class="url">http://plus.maths.org</a> <a class="button" href="http://stattrek.com" class="url">http://stattrek.com</a>
-	<a class="button" href="http://journal.sjdm.org" class="url">http://journal.sjdm.org</a> <a class="button" href="http://library.mises.org" class="url">http://library.mises.org</a>
-	<a class="button" href="https://fee.org/" class="url">https://fee.org/</a> <a class="button" href="https://thesystemsthinker.com" class="url">https://thesystemsthinker.com</a>
-	<a class="button" href="https://aeon.co/" class="url">https://aeon.co/</a> <a class="button" href="https://www.wunderground.com/wundermap?lat=40.23&lon=-76.93">WUnderMap</a>
-	<a class="button" href="https://nocable.org/tv-listings/aa46b-mechanicsburg-pennsylvania-17050"> TV Listing </a> 
-	<a class="button" href="https://arxiv.org/about"> ArXiv</a>
-	<a class="button" href="https://skyandtelescope.org/observing/"> Sky and Telescope - Observing</a>
-</details>
+    <div class="section-card" id="latex">
+      <details open><summary>LaTeX</summary>
+        <div class="card-body">
+          <a href="https://www.latex-project.org/">LaTeX Project</a>
+          <a href="https://www.latextemplates.com">Latex Templates</a>
+          <a href="https://latexdraw.com/">Latex Draw</a>
+          <a href="https://www.overleaf.com">Overleaf</a>
+          <a href="https://ctan.math.illinois.edu/info/impatient/book.pdf">The TeX Book</a>
+          <a href="https://www.ctan.org/tex-archive/systems/knuth/dist/tex/">Tex Book Source</a>
+          <a href="https://mirrors.rit.edu/CTAN/info/texbytopic/TeXbyTopic.pdf">Tex by Topic</a>
+          <a href="https://www.dickimaw-books.com/latexresources.html">Dickimaw Books</a>
+          <a href="https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols">Latex Symbols</a>
+          <a href="https://www.giss.nasa.gov/tools/latex/ltx-2.html">NASA Guide</a>
+          <a href="https://ras.papercept.net/conferences/support/tex.php">IEEE Robotics</a>
+          <a href="https://tex.stackexchange.com/questions/230526/list-of-books-written-in-latex-with-the-source-available">Books in LaTeX</a>
+        </div>
+      </details>
+    </div>
 
-<br>
-	<details> <summary> <i class="fas fa-satellite"></i> </summary>
-	<div
-		style='display: inline-block; border: 1px solid #CCC; border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px; position: relative; overflow: hidden; width: 310px; height: 450px;'>
-		<iframe src='https://spotthestation.nasa.gov/widget/widget.cfm?country=United_States&region=Pennsylvania&city=Mechanicsburg'
-			width='310' height='450' frameborder='0'></iframe>
-	</div>
-	</details>
+    <div class="section-card" id="devotional">
+      <details open><summary>Devotional</summary>
+        <div class="card-body">
+          <a href="Devotional.html">Devotional Page</a>
+          <a href="http://dvaita.org">Dvaita</a>
+          <a href="https://madhwafestivals.wordpress.com/">Madhwa blog</a>
+          <a href="https://sites.google.com/site/aktbfkollam/">Madhwa Samajam Kollam</a>
+          <a href="https://anandsp1.wordpress.com">AnandSp1</a>
+          <a href="http://vyasamadhwa.org/">Sri Vyaasa Madhwa</a>
+          <a href="http://meerasubbarao.wordpress.com/">Meera Subbarao</a>
+          <a href="http://www.vyasamadhwa.org/upanyasa/">Sri Vyaasa Madhwa Upanyasa</a>
+          <a href="http://gururaghavendra1.org/cal.pdf">Guru Raghavendra Cal</a>
+          <a href="http://mypanchang.com/">My Panchang</a>
+          <a href="https://www.prapatti.com/">Prapatti</a>
+          <a href="https://www.esamskriti.com/ebook.aspx">eSamskriti</a>
+          <a href="http://www.acharya.org">Acharya</a>
+          <span class="sub-label">Temples</span>
+          <a href="http://svtemple.org/">SV Temple, Pitt</a>
+          <a href="http://ssvt.org">SSVT MD</a>
+          <a href="http://www.haritemple.org">HARI</a>
+          <a href="http://hindutemplede.org/">Delaware Temple</a>
+          <a href="http://www.sbat.org/">Sri Bhaktha Anjaneya Temple</a>
+          <a href="https://venkateswaratemple.org/">Sri Venkateswara Temple</a>
+          <span class="sub-label">Books</span>
+          <a href="SathyanaraynaPujaProcedure.pdf">Sri Sathyanarayana Puja</a>
+          <a href="media/DevaPooja.pdf">Deva Puja Scanned</a>
+          <a href="media/GokulashtamiPooja.pdf">Gokulashtami Pooja</a>
+          <a href="media/RaghavendraStoraMala.pdf">Raghavendra Stotra Mala</a>
+          <a href="media/RigVedaSandhyavanthanam.pdf">Rig Veda Sandhyavanthanam</a>
+          <a href="media/VaralaksmiPooja.pdf">Varalakshmi Puja</a>
+        </div>
+      </details>
+    </div>
 
+    <div class="section-card" id="recipes">
+      <details open><summary>Recipes</summary>
+        <div class="card-body">
+          <a href="http://maneadige.blogspot.com/">Maneadige</a>
+          <a href="http://www.vegrecipesofindia.com/">Veg recipes of India</a>
+          <a href="https://www.shelikesfood.com">SheLikesFood</a>
+          <a href="http://www.upala.net">Upala.net</a>
+          <a href="https://www.thekitchn.com/25-vegetarian-dinners-to-make-in-your-cast-iron-skillet-236383">Kitchn Cast Iron</a>
+          <a href="https://www.vegetariantimes.com">Vegetarian Times</a>
+          <a href="https://naturallyella.com">Naturally Ella</a>
+          <a href="https://herbivoracious.com">Herbivoracious</a>
+          <a href="http://www.mydomaine.com/cast-iron-skillet-recipes">MyDomaine</a>
+          <a href="https://www.nutrition-and-you.com">Nutrition and You</a>
+          <a href="https://sadhanakitchen.blogspot.com/">Sadhana Kitchen</a>
+          <a href="https://hebbarskitchen.com">Hebbar Kitchen</a>
+          <a href="https://www.youtube.com/channel/UCPPIsrNlEkaFQBk-4uNkOaw">Hebbar Kitchen YouTube</a>
+          <a href="https://www.happycow.net">Happy Cow</a>
+        </div>
+      </details>
+    </div>
 
+    <div class="section-card" id="photography">
+      <details open><summary>Photography</summary>
+        <div class="card-body">
+          <a href="http://digital-photography-school.com/">DPS</a>
+          <a href="http://petapixel.com">PetaPixel</a>
+          <a href="http://www.diyphotography.net/">DIY</a>
+          <a href="http://slrcoaching.com/">SLR Coaching</a>
+          <a href="http://www.cambridgeincolour.com">Cambridge</a>
+          <a href="http://www.lightstalking.com">LightStalking</a>
+          <a href="http://yourshot.nationalgeographic.com">YourShot</a>
+          <a href="https://photographylife.com">PhotographyLife</a>
+          <a href="https://www.capturelandscapes.com">Capture Landscapes</a>
+          <a href="https://wspc.photoclubservices.com">WestShoreClub</a>
+          <a href="http://www.skyandtelescope.com">Sky and Telescope</a>
+          <a href="http://www.dpreview.com">DP Review</a>
+          <a href="http://shutterbug.com">Shutterbug</a>
+          <a href="http://amateurphotographer.co.uk">Amateur Photographer</a>
+          <a href="http://photographytalk.com">Photography Talk</a>
+          <a href="http://fstoppers.com">Fstoppers</a>
+          <a href="http://thephoblographer.com">The Phoblographer</a>
+          <a href="http://iso1200.com">ISO1200</a>
+          <a href="http://lomography.com">Lomography</a>
+          <a href="https://www.picturecorrect.com">Picture Correct</a>
+          <a href="https://www.digitalphotomentor.com">Digital Photo Mentor</a>
+        </div>
+      </details>
+    </div>
 
-<!-- LOCAL LINKS -->
-<br>
-<details> <summary><i class="fas fa-map-marked"></i>  </summary>
-	<a class="button" href="http://pennwatch.pa.gov/employees/Pages/Employee-Salaries.aspx">PennWatch</a>
-	<a class="button" href="https://www.cumberlandcountylibraries.org/">CCPA Lib</a> 
-		<a class="button" href="https://instantink.hpconnected.com"> Instant Ink</a> 
-		<a class="button" href="https://www.wildwoodlake.org/">WWL</a> 
-		<a class="button" href="https://tex.stackexchange.com/questions/230526/list-of-books-written-in-latex-with-the-source-available"> Latex</a>
-		<a class="button" href="https://coronavirus.jhu.edu/map.html"> JHU Covid </a>
-		<a class="button" href="https://coronavirus.jhu.edu/region/us/pennsylvania"> JHU Pennsylvania </a>
-		<a class="button" href="https://bao.arcgis.com/covid-19/jhu/county/42101.html"> Covid - Philadelphia </a>
-		<a class="button" href="https://bao.arcgis.com/covid-19/jhu/county/42041.html"> Covid- cumberland </a>
-		<a class="button" href="https://bao.arcgis.com/covid-19/jhu/county/42043.html"> Covid - dauphin </a>
-		<a class="button" href="https://www.abc27.com/"> ABC 27 </a>
-		<a class="button" href="https://www.wgal.com/">WGAL</a>
-		<a class="button" href="https://local21news.com">CBS 21</a>
-		<a class="button" href="https://www.pennlive.com/">Pennlive</a>
-		<a class="button" href="https://nocable.org/tv-listings/zip/17050-mechanicsburg-pa/"> TV Listing </a>
-		<a class="button" href="https://www.ccpa.net/">CCPA</a>
-		<a class="button" href="https://gis.ccpa.net/PropertyMapper/">CCPA Property Mapper</a>
-		<a class="button" href="https://www.hampdentownship.us/">Hampden Township</a>
-		<a class="button" href="https://caliber.cloud/CaliberWeb2_EsquireAM">Esquire Management</a>
+    <div class="section-card" id="science">
+      <details open><summary>Science</summary>
+        <div class="card-body">
+          <a href="http://www.plos.org">PLOS</a>
+          <a href="http://www.pnas.org">PNAS</a>
+          <a href="https://www.sapiens.org">Sapiens</a>
+          <a href="http://plus.maths.org">Plus Maths</a>
+          <a href="http://stattrek.com">Stat Trek</a>
+          <a href="http://journal.sjdm.org">SJDM Journal</a>
+          <a href="http://library.mises.org">Mises</a>
+          <a href="https://fee.org/">Fee</a>
+          <a href="https://thesystemsthinker.com">Systems Thinker</a>
+          <a href="https://aeon.co/">Aeon</a>
+          <a href="https://www.wunderground.com/wundermap?lat=40.23&lon=-76.93">WunderMap</a>
+          <a href="https://nocable.org/tv-listings/aa46b-mechanicsburg-pennsylvania-17050">TV Listing</a>
+          <a href="https://arxiv.org/about">ArXiv</a>
+          <a href="https://skyandtelescope.org/observing/">Sky and Telescope - Observing</a>
+        </div>
+      </details>
+    </div>
 
+    <div class="section-card" id="local">
+      <details open><summary>Local</summary>
+        <div class="card-body">
+          <a href="http://pennwatch.pa.gov/employees/Pages/Employee-Salaries.aspx">PennWatch</a>
+          <a href="https://www.cumberlandcountylibraries.org/">CCPA Lib</a>
+          <a href="https://instantink.hpconnected.com">Instant Ink</a>
+          <a href="https://www.wildwoodlake.org/">WWL</a>
+          <a href="https://tex.stackexchange.com/questions/230526/list-of-books-written-in-latex-with-the-source-available">Latex</a>
+          <a href="https://coronavirus.jhu.edu/map.html">JHU Covid</a>
+          <a href="https://coronavirus.jhu.edu/region/us/pennsylvania">JHU Pennsylvania</a>
+          <a href="https://bao.arcgis.com/covid-19/jhu/county/42101.html">Covid - Philadelphia</a>
+          <a href="https://bao.arcgis.com/covid-19/jhu/county/42041.html">Covid - Cumberland</a>
+          <a href="https://bao.arcgis.com/covid-19/jhu/county/42043.html">Covid - Dauphin</a>
+          <a href="https://www.abc27.com/">ABC 27</a>
+          <a href="https://www.wgal.com/">WGAL</a>
+          <a href="https://local21news.com">CBS 21</a>
+          <a href="https://www.pennlive.com/">PennLive</a>
+          <a href="https://nocable.org/tv-listings/zip/17050-mechanicsburg-pa/">TV Listing</a>
+          <a href="https://www.ccpa.net/">CCPA</a>
+          <a href="https://gis.ccpa.net/PropertyMapper/">CCPA Property Mapper</a>
+          <a href="https://www.hampdentownship.us/">Hampden Township</a>
+          <a href="https://caliber.cloud/CaliberWeb2_EsquireAM">Esquire Management</a>
+        </div>
+      </details>
+    </div>
 
-</details>
-</main>
-<p>
-<footer>
-<hr>
-Best viewed with font <a href="https://b612-font.com/">B612</a> on white background. Icons sourced from<a href="https://www.fontawesome.com">Font Awesome </a>
-</footer>
+    <div class="section-card" id="shopping">
+      <details open><summary>Shopping</summary>
+        <div class="card-body">
+          <a href="https://stores.bestbuy.com/pa/mechanicsburg/6416-carlisle-pike-1478.html">Best Buy</a>
+          <a href="https://www.lowes.com/store/PA-Mechanicsburg/2223">Lowes</a>
+          <a href="https://www.homedepot.com/l/Mechanicsburg/PA/Mechanicsburg/17050/4120">Home Depot</a>
+          <a href="https://www.samsclub.com/club/mechanicsburg-pa-sams-club/4994">Sam's Club</a>
+          <a href="https://www.costco.com/w/-/pa/mechanicsburg/1719">Costco</a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function pad(n){return n<10 ? '0'+n : n;}
+function fmtDate(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function fmtTime(d){return pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());}
+function updateGMT(){
+  const n=new Date();
+  document.getElementById('gmt-time').textContent='GMT: '+n.getUTCFullYear()+'-'+pad(n.getUTCMonth()+1)+'-'+pad(n.getUTCDate())+' '+pad(n.getUTCHours())+':'+pad(n.getUTCMinutes())+':'+pad(n.getUTCSeconds());
+}
+function updateLCL(){
+  const n=new Date();
+  document.getElementById('local-time').textContent='LCL: '+fmtDate(n)+' '+fmtTime(n);
+}
+function updateIST(){
+  const n=new Date();
+  const ist=new Date(n.getTime()+(n.getTimezoneOffset()*60000)+(5.5*3600000));
+  document.getElementById('ist-time').textContent='IST: '+fmtDate(ist)+' '+fmtTime(ist);
+}
+updateGMT(); updateLCL(); updateIST();
+setInterval(updateGMT, 1000); setInterval(updateLCL, 1000); setInterval(updateIST, 1000);
+
+window.addEventListener('DOMContentLoaded', () => {
+  const host = document.getElementById('monthly-calendar');
+  if (!host) return;
+  host.innerHTML = '<div class="cal-grid"><div class="cal-wrap"><div class="cal-title" data-title="-1"></div><table><thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead><tbody data-body="-1"></tbody></table></div><div class="cal-wrap"><div class="cal-title" data-title="0"></div><table><thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead><tbody data-body="0"></tbody></table></div><div class="cal-wrap"><div class="cal-title" data-title="1"></div><table><thead><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr></thead><tbody data-body="1"></tbody></table></div></div>';
+  const now = new Date();
+  [-1, 0, 1].forEach(i => {
+    const d = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    host.querySelector('[data-title="' + i + '"]').textContent = d.toLocaleString(undefined, { month: 'long' }) + ' ' + d.getFullYear();
+    renderMonth(host.querySelector('[data-body="' + i + '"]'), d.getFullYear(), d.getMonth(), i === 0 ? now.getDate() : null);
+  });
+});
+
+function renderMonth(tbody, year, month, today) {
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  let day = 1;
+  tbody.innerHTML = '';
+  for (let r = 0; r < 6; r++) {
+    const tr = document.createElement('tr');
+    for (let c = 0; c < 7; c++) {
+      const td = document.createElement('td');
+      if ((r === 0 && c < firstDay) || day > daysInMonth) {
+        td.className = 'empty';
+        td.innerHTML = '&nbsp;';
+      } else {
+        td.textContent = day;
+        if (today && day === today) td.classList.add('today');
+        day++;
+      }
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+    if (day > daysInMonth) break;
+  }
+}
+
+function filterLinks() {
+  const filter = document.getElementById('myInput').value.toUpperCase();
+  document.querySelectorAll('.card-body a').forEach(a => {
+    const text = (a.textContent || a.innerText).toUpperCase();
+    a.style.display = text.includes(filter) ? '' : 'none';
+  });
+  document.querySelectorAll('.section-card').forEach(card => {
+    const anyVisible = [...card.querySelectorAll('.card-body a')].some(a => a.style.display !== 'none');
+    card.style.display = (filter === '' || anyVisible) ? '' : 'none';
+  });
+}
+</script>
+
 </body>
 </html>
